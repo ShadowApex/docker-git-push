@@ -13,4 +13,6 @@ ENV SLEEP_INTERVAL="600"
 
 RUN apk --no-cache add git
 
+COPY entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
