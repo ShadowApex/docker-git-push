@@ -19,7 +19,7 @@ cd ${WORKING_DIR}
 if [ ! -d ~/.ssh ]; then
 	echo "SSH Key was not found. Configuring SSH Key."
 	mkdir ~/.ssh
-	echo "${SSH_KEY}" > ~/.ssh/id_rsa
+	echo -e "${SSH_KEY}" > ~/.ssh/id_rsa
 	chmod 700 ~/.ssh
 	chmod 600 ~/.ssh/id_rsa
 
