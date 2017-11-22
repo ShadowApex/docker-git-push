@@ -11,7 +11,9 @@ ENV SSH_KEY=""
 ENV FILES_TO_COMMIT="."
 ENV SLEEP_INTERVAL="600"
 
-RUN apk --no-cache add git
+RUN apk update && \
+        apk add git && \
+	apk add openssh-client
 
 COPY entrypoint.sh /entrypoint.sh
 
